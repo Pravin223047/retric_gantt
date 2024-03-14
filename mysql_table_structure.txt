@@ -1,0 +1,24 @@
+Structure of mysql table:
+
+CREATE TABLE retric_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    task_name VARCHAR(255) NOT NULL,
+    resource VARCHAR(255),
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    duration INT,
+    percent_complete INT,
+    dependencies VARCHAR(255)
+);
+
+
+Data Insertion:-
+
+INSERT INTO retric_data (task_name, resource, start_date, end_date, duration, percent_complete, dependencies)
+VALUES 
+('Find sources', NULL, '2015-01-01', '2015-01-05', NULL, 100, NULL),
+('Write paper', 'write', NULL, '2015-01-09', NULL, 25, 'Research,Outline'),
+('Create bibliography', 'write', NULL, '2015-01-07', NULL, 20, 'Research'),
+('Hand in paper', 'complete', NULL, '2015-01-10', NULL, 0, 'Cite,Write'),
+('Outline paper', 'write', NULL, '2015-01-06', NULL, 100, 'Research');
+
